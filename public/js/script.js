@@ -15,27 +15,25 @@ loc.classList.add("hid");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   mOne1.classList.remove("hid");
-  fetch(`http://localhost:3000/weather?address=${searchInput.value}`).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          mTwo2.classList.add("hid");
-          mOne1.classList.remove("success");
-          mOne1.classList.add("error");
-          loc.classList.add("hid");
-          alert.classList.remove("hid");
-          mOne.textContent = data.error;
-          mTwo.textContent = "";
-        } else {
-          mTwo2.classList.remove("hid");
-          mOne1.classList.add("success");
-          mTwo2.classList.add("weather");
-          loc.classList.remove("hid");
-          alert.classList.add("hid");
-          mOne.textContent = `Location: ${data[0].location}`;
-          mTwo.textContent = `Weather is ${data[0].weather} with ${data[0].temp}°C. It feels like ${data[0].feelsLike}°C and the rain probability is ${data[0].precip}%`;
-        }
-      });
-    }
-  );
+  fetch(`/weather?address=${searchInput.value}`).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        mTwo2.classList.add("hid");
+        mOne1.classList.remove("success");
+        mOne1.classList.add("error");
+        loc.classList.add("hid");
+        alert.classList.remove("hid");
+        mOne.textContent = data.error;
+        mTwo.textContent = "";
+      } else {
+        mTwo2.classList.remove("hid");
+        mOne1.classList.add("success");
+        mTwo2.classList.add("weather");
+        loc.classList.remove("hid");
+        alert.classList.add("hid");
+        mOne.textContent = `Location: ${data[0].location}`;
+        mTwo.textContent = `Weather is ${data[0].weather} with ${data[0].temp}°C. It feels like ${data[0].feelsLike}°C and the rain probability is ${data[0].precip}%`;
+      }
+    });
+  });
 });

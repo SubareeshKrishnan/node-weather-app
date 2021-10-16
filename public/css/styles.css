@@ -86,3 +86,17 @@ button {
   padding: 8px;
   border-radius: 3px;
 }
+
+.add {
+  background-color: grey;
+  color: white;
+  border-radius: 2px;
+  padding: 2px;
+}
+.help--1 {
+  margin-bottom: 0px;
+}
+.help--2 {
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
