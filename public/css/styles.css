@@ -1,0 +1,88 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.wdiv {
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px auto;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+}
+h1 {
+  font-size: 64px;
+  margin: 0px;
+}
+header {
+  margin-bottom: 50px;
+}
+header a {
+  color: #888888;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+img {
+  width: 250px;
+}
+input {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
+}
+
+.p11 {
+  padding: 8px;
+  border-radius: 3px;
+  transition: all 1s;
+}
+.p22 {
+  padding: 8px;
+  border-radius: 3px;
+  transition: all 1s;
+}
+
+.error {
+  background: #f08080;
+  border: 1px solid crimson;
+  transition: all 1s;
+}
+
+.success {
+  background: #98fb98;
+  border: 1px solid green;
+  transition: all 1s;
+}
+
+.weather {
+  background-color: #00bfff;
+  border-radius: 3px;
+  border: 1px solid #4169e1;
+  transition: all 1s;
+}
+
+.hid {
+  display: none;
+}
+
+.f404 {
+  background: #f08080;
+  border: 1px solid crimson;
+  transition: all 1s;
+  padding: 8px;
+  border-radius: 3px;
+}
